@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายชื่อติดต่อหัวหน้าส่วนราชการ</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Sarabun",sans-serif;
+}
+
+body{
+    background:#FFF8F2;
+}
+
+header{
+    background:linear-gradient(135deg,#F2994A,#F6B26B);
+    color:#fff;
+    text-align:center;
+    padding:30px 20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:30px;
+}
+
+header p{
+    margin-top:8px;
+    font-size:17px;
+}
+
+.container{
+    width:95%;
+    max-width:1100px;
+    margin:40px auto;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    border:2px solid #FFE2C2;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(242,153,74,.25);
+}
+
+.avatar{
+    font-size:80px;
+    margin-bottom:15px;
+}
+
+.name{
+    font-size:21px;
+    font-weight:bold;
+    color:#D97706;
+}
+
+.position{
+    color:#666;
+    margin:10px 0;
+    min-height:50px;
+    line-height:1.5;
+}
+
+.phone{
+    font-size:17px;
+}
+
+.phone a{
+    color:#0B66C3;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.back{
+    display:inline-block;
+    margin-top:40px;
+    padding:12px 30px;
+    background:#F2994A;
+    color:#fff;
+    text-decoration:none;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.back:hover{
+    background:#E67E22;
+}
+
+footer{
+    margin-top:40px;
+    padding:20px;
+    text-align:center;
+    color:#777;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>รายชื่อติดต่อหัวหน้าส่วน</h1>
+    <p>องค์การบริหารส่วนตำบลดอนคา</p>
+</header>
+
+<div class="container">
+
+    <div class="card-grid">
+
+        <!-- คนที่ 1 -->
+        <div class="card">
+            <div class="avatar">👤</div>
+            <div class="name">นายวิเชษฐ ฤทธิ์บำรุง</div>
+            <div class="position">ปลัด อบต.ดอนคา</div>
+            <div class="phone">
+                📞 <a href="tel:0816535629">081-653-5629</a>
+            </div>
+        </div>
+
+        <!-- คนที่ 2 -->
+        <div class="card">
+            <div class="avatar">👤</div>
+            <div class="name">นางรุจเรศน์ ชูชิต</div>
+            <div class="position">ผู้อำนวยการกองคลัง</div>
+            <div class="phone">
+                📞 <a href="tel:0959212233">095-921-2233</a>
+            </div>
+        </div>
+
+        <!-- คนที่ 3 -->
+        <div class="card">
+            <div class="avatar">👤</div>
+            <div class="name">นายสัญญา จาบทอง</div>
+            <div class="position">วิศวกรโยธาชำนาญการ
+รักษาราชการแทนผู้อำนวยการกองช่าง</div>
+            <div class="phone">
+                📞 <a href="tel:0966613467">096-661-3467</a>
+            </div>
+        </div>
+
+        <!-- คนที่ 4 -->
+        <div class="card">
+            <div class="avatar">👤</div>
+            <div class="name">นางดาวรุ่ง สวัสดิรักษ์</div>
+            <div class="position">ผู้อำนวยการกองการศึกษา ศาสนาและวัฒนธรรม</div>
+            <div class="phone">
+                📞 <a href="tel:0931310498">093-131-0498</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <a href="index.html" class="back">← กลับหน้าหลัก</a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 องค์การบริหารส่วนตำบลดอนคา
+</footer>
+
+</body>
+</html>

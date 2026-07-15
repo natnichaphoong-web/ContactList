@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายชื่อติดต่อพนักงานจ้างเหมาบริการ</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Sarabun",sans-serif;
+}
+
+body{
+    background:#FFF8F2;
+}
+
+header{
+    background:linear-gradient(135deg,#F2994A,#F6B26B);
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:30px;
+}
+
+header p{
+    margin-top:8px;
+    font-size:17px;
+}
+
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:35px auto;
+}
+
+.section-title{
+    color:#fff;
+    padding:14px 20px;
+    border-radius:12px;
+    margin:35px 0 20px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+}
+
+/* สำนักปลัด */
+.secretary{
+    background:linear-gradient(135deg,#F2994A,#F6B26B);
+    border-left:8px solid #D97706;
+}
+
+/* กองคลัง */
+.finance{
+    background:linear-gradient(135deg,#27AE60,#6FCF97);
+    border-left:8px solid #1E8449;
+}
+
+/* กองช่าง */
+.engineering{
+    background:linear-gradient(135deg,#2980B9,#5DADE2);
+    border-left:8px solid #21618C;
+}
+
+/* กองการศึกษา */
+.education{
+    background:linear-gradient(135deg,#8E44AD,#BB6BD9);
+    border-left:8px solid #6C3483;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+/* Tablet */
+@media (max-width:992px){
+    .card-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width:576px){
+    .card-grid{
+        grid-template-columns:1fr;
+    }
+}
+.card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    background:#fff;
+    border:1px solid #FFD9B3;
+    border-radius:12px;
+    padding:12px;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(242,153,74,.25);
+}
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 15px rgba(242,153,74,.25);
+}
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(242,153,74,.25);
+}
+
+.avatar{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#F2994A;
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:24px;
+
+    flex-shrink:0;
+}
+.info{
+    flex:1;
+}
+
+.name{
+    font-size:16px;
+    font-weight:bold;
+    color:#D97706;
+    margin-bottom:3px;
+}
+
+.position{
+    font-size:14px;
+    color:#666;
+    margin-bottom:4px;
+    line-height:1.4;
+}
+
+.phone{
+    font-size:14px;
+}
+
+.phone a{
+    color:#0B66C3;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.back{
+    display:inline-block;
+    margin:40px auto;
+    padding:12px 30px;
+    background:#F2994A;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+.back:hover{
+    background:#E67E22;
+}
+
+footer{
+    margin-top:40px;
+    padding:20px;
+    text-align:center;
+    color:#666;
+}
+/* Tablet */
+@media (max-width:992px){
+    .card-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width:576px){
+    .card-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>รายชื่อติดต่อพนักงานจ้างเหมาบริการ</h1>
+<p>องค์การบริหารส่วนตำบลดอนคา</p>
+</header>
+
+<div class="container">
+
+<!-- สำนักปลัด -->
+<div class="section-title secretary">
+    🏛 สำนักปลัด (7 คน)
+</div>
+<div class="card-grid">
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายพงศธร  ฤทธิ์บำรุง
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:"></a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายเอกรัฐ  แป้นเพชร
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:"></a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายคมสัน  เทียนเเจ่ม
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:"></a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายพเยาว์  แป้นเพชร
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0990207156">099-020-7156</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายคมสัน  กรรขำ
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:"></a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายชนะ  ศรีบรรเทา
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:08411895757">084-118-9575</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางสาวหม่วยแคะ  แซ่จ๋าว
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0841232431">084-123-2431</a>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+<!-- กองคลัง -->
+<div class="section-title finance">
+    💰 กองคลัง (3 คน)
+</div>
+
+<div class="card-grid">
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายพชรพล  ฤทธิ์บำรุง
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0935012260">093-501-2260</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายสมยศ  แก้วคง
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:"></a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายปัณณวัตน์  โนนจุ้ย
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0831636807">083-163-6870</a>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- กองช่าง -->
+<div class="section-title engineering">
+    🏗 กองช่าง (5 คน)
+</div>
+
+<div class="card-grid">
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายวิภาคย์  คงเมือง
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:"></a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายทศพล  แสงเขียว
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0847265450">084-726-5450</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางสาวณิชากร  บุญเติม
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0895645772">089-564-5772</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายภคพงษ์  หมีแสวง
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0987962389">098-796-2389</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายสมบัติ  แสงราช
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0811915621">081-191-5621</a>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+<!-- กองการศึกษา -->
+<div class="section-title education">
+    📚 กองการศึกษา ศาสนาและวัฒนธรรม (3 คน)
+</div>
+
+<div class="card-grid">
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางสาวธันย์ชนก  สอนมาก
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:"></a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางสาวสุภัสสร  จันทา
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:"></a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางสาวนวรัตน์  แม้นพยัคฆ์
+        </div>
+
+        <div class="position">
+            จ้างเหมาบริการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0803939436">080-393-9436</a>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+<div style="text-align:center;">
+<a href="Employee.html" class="back">← กลับหน้าข้อมูลบุคลากร</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 องค์การบริหารส่วนตำบลดอนคา
+</footer>
+
+</body>
+</html>

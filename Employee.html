@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>โครงสร้างบุคลากร อบต.ดอนคา</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Sarabun",sans-serif;
+}
+
+body{
+    background:#FFF8F2;
+}
+
+header{
+    background:linear-gradient(135deg,#F2994A,#F6B26B);
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+header h1{
+    font-size:32px;
+}
+
+header p{
+    margin-top:8px;
+    font-size:18px;
+}
+
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border:2px solid #FFE3C3;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(242,153,74,.25);
+}
+
+.icon{
+    font-size:55px;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.title{
+    text-align:center;
+    font-size:24px;
+    color:#D97706;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.total{
+    text-align:center;
+    font-size:18px;
+    color:#444;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.list{
+    list-style:none;
+}
+
+.list li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+    display:flex;
+    justify-content:space-between;
+    font-size:17px;
+}
+
+.list li:last-child{
+    border-bottom:none;
+}
+
+.btn{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    background:#F2994A;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#E67E22;
+}
+
+footer{
+    margin-top:50px;
+    text-align:center;
+    padding:20px;
+    color:#666;
+}
+.back{
+    display:inline-block;
+    margin:40px auto;
+    padding:12px 30px;
+    background:#F2994A;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back:hover{
+    background:#E67E22;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>ข้อมูลบุคลากร</h1>
+    <p>องค์การบริหารส่วนตำบลดอนคา</p>
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+    <!-- พนักงานส่วนตำบล -->
+    <div class="card">
+        <div class="icon">👨‍💼</div>
+        <div class="title">พนักงานส่วนตำบล</div>
+        <div class="total">จำนวนทั้งหมด 17 คน</div>
+
+        <ul class="list">
+            <li><span>สำนักปลัด</span><strong>7 คน</strong></li>
+            <li><span>กองคลัง</span><strong>4 คน</strong></li>
+            <li><span>กองช่าง</span><strong>1 คน</strong></li>
+            <li><span>กองการศึกษา</span><strong>5 คน</strong></li>
+        </ul>
+
+        <a href="Local Government Officer.html" class="btn">ดูรายชื่อ</a>
+    </div>
+
+    <!-- พนักงานจ้างตามภารกิจ -->
+    <div class="card">
+        <div class="icon">👩‍💼</div>
+        <div class="title">พนักงานจ้างตามภารกิจ</div>
+        <div class="total">จำนวนทั้งหมด 15 คน</div>
+
+        <ul class="list">
+            <li><span>สำนักปลัด</span><strong>5 คน</strong></li>
+            <li><span>กองคลัง</span><strong>2 คน</strong></li>
+            <li><span>กองช่าง</span><strong>4 คน</strong></li>
+            <li><span>กองการศึกษา</span><strong>4 คน</strong></li>
+        </ul>
+
+        <a href="Mission-Based Employees.html" class="btn">ดูรายชื่อ</a>
+    </div>
+
+    <!-- พนักงานจ้างทั่วไป -->
+    <div class="card">
+        <div class="icon">👷</div>
+        <div class="title">พนักงานจ้างทั่วไป</div>
+        <div class="total">จำนวนทั้งหมด 7 คน</div>
+
+        <ul class="list">
+            <li><span>สำนักปลัด</span><strong>7 คน</strong></li>
+        </ul>
+
+        <a href="General Employees.html" class="btn">ดูรายชื่อ</a>
+    </div>
+
+    <!-- พนักงานจ้างเหมาบริการ -->
+    <div class="card">
+        <div class="icon">🧰</div>
+        <div class="title">พนักงานจ้างเหมาบริการ</div>
+        <div class="total">จำนวนทั้งหมด 18 คน</div>
+
+        <ul class="list">
+            <li><span>สำนักปลัด</span><strong>7 คน</strong></li>
+            <li><span>กองคลัง</span><strong>3 คน</strong></li>
+            <li><span>กองช่าง</span><strong>5 คน</strong></li>
+            <li><span>กองการศึกษา</span><strong>3 คน</strong></li>
+        </ul>
+
+        <a href="Service Contract Employees.html" class="btn">ดูรายชื่อ</a>
+    </div>
+
+</div>
+
+</div>
+<div style="text-align:center;">
+    <a href="index.html" class="back">🏠 กลับหน้าหลัก</a>
+</div>
+
+<footer>
+© 2026 องค์การบริหารส่วนตำบลดอนคา
+</footer>
+
+</body>
+</html>

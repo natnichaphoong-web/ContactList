@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายชื่อติดต่อพนักงานจ้างตามภารกิจ</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Sarabun",sans-serif;
+}
+
+body{
+    background:#FFF8F2;
+}
+
+header{
+    background:linear-gradient(135deg,#F2994A,#F6B26B);
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:30px;
+}
+
+header p{
+    margin-top:8px;
+    font-size:17px;
+}
+
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:35px auto;
+}
+
+.section-title{
+    color:#fff;
+    padding:14px 20px;
+    border-radius:12px;
+    margin:35px 0 20px;
+    font-size:22px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+}
+
+/* สำนักปลัด */
+.secretary{
+    background:linear-gradient(135deg,#F2994A,#F6B26B);
+    border-left:8px solid #D97706;
+}
+
+/* กองคลัง */
+.finance{
+    background:linear-gradient(135deg,#27AE60,#6FCF97);
+    border-left:8px solid #1E8449;
+}
+
+/* กองช่าง */
+.engineering{
+    background:linear-gradient(135deg,#2980B9,#5DADE2);
+    border-left:8px solid #21618C;
+}
+
+/* กองการศึกษา */
+.education{
+    background:linear-gradient(135deg,#8E44AD,#BB6BD9);
+    border-left:8px solid #6C3483;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+/* Tablet */
+@media (max-width:992px){
+    .card-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width:576px){
+    .card-grid{
+        grid-template-columns:1fr;
+    }
+}
+.card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    background:#fff;
+    border:1px solid #FFD9B3;
+    border-radius:12px;
+    padding:12px;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(242,153,74,.25);
+}
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 15px rgba(242,153,74,.25);
+}
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(242,153,74,.25);
+}
+
+.avatar{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#F2994A;
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:24px;
+
+    flex-shrink:0;
+}
+.info{
+    flex:1;
+}
+
+.name{
+    font-size:16px;
+    font-weight:bold;
+    color:#D97706;
+    margin-bottom:3px;
+}
+
+.position{
+    font-size:14px;
+    color:#666;
+    margin-bottom:4px;
+    line-height:1.4;
+}
+
+.phone{
+    font-size:14px;
+}
+
+.phone a{
+    color:#0B66C3;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.back{
+    display:inline-block;
+    margin:40px auto;
+    padding:12px 30px;
+    background:#F2994A;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+.back:hover{
+    background:#E67E22;
+}
+
+footer{
+    margin-top:40px;
+    padding:20px;
+    text-align:center;
+    color:#666;
+}
+/* Tablet */
+@media (max-width:992px){
+    .card-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width:576px){
+    .card-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>รายชื่อติดต่อพนักงานจ้างตามภารกิจ</h1>
+<p>องค์การบริหารส่วนตำบลดอนคา</p>
+</header>
+
+<div class="container">
+
+<!-- สำนักปลัด -->
+<div class="section-title secretary">
+    🏛 สำนักปลัด (5 คน)
+</div>
+<div class="card-grid">
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางสาวเคลือวัลย์ ฤทธิ์บำรุง
+        </div>
+
+        <div class="position">
+            ผู้ช่วยเจ้าพนักงานธุรการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0807892916">080-789-2916</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางสาวชณิกานต์ กลิ่นสอน
+        </div>
+
+        <div class="position">
+            ผู้ช่วยเจ้าพนักงานธุรการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0622838498">062-283-8498</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายวัชระ  ยศสมาน
+        </div>
+
+        <div class="position">
+            พนักงานขับรถยนต์
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:"></a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายภัทราวุธ สนิทผล
+        </div>
+
+        <div class="position">
+            พนักงานดับเพลิง
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0825240005">082-524-0005</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายภานุวัตน์ ภูยงค์
+        </div>
+
+        <div class="position">
+            พนักงานขับเครื่องจักรกลขนาดเบา
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0909543545">090-954-3545</a>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- กองคลัง -->
+<div class="section-title finance">
+    💰 กองคลัง (2 คน)
+</div>
+
+<div class="card-grid">
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายวีระชัย กุลกล่ำ
+        </div>
+
+        <div class="position">
+            ผู้ช่วยเจ้าพนักงานพัสดุ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0980030501">098-003-0501</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางสาวน้ำค้าง สนิทผล
+        </div>
+
+        <div class="position">
+            ผู้ช่วยเจ้าหน้าที่จัดเก็บรายได้
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0969198419">096-919-8419</a>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+<!-- กองช่าง -->
+<div class="section-title engineering">
+    🏗 กองช่าง (4 คน)
+</div>
+
+<div class="card-grid">
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายเกษม สุขแจ่ม
+        </div>
+
+        <div class="position">
+            ผู้ช่วยนายช่างโยธา
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0803357661">080-335-7661</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายอิศเรศ ไม้แก้ว
+        </div>
+
+        <div class="position">
+            ผู้ช่วยนายช่างไฟฟ้า
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0811817522">081-181-7522</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นายสมชาย อ่อนสำอางศ์
+        </div>
+
+        <div class="position">
+            ผู้ช่วยนายช่างประปา
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0847042609">084-704-2609</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางสาวณัฏฐวรรณ จาบทอง
+        </div>
+
+        <div class="position">
+            ผู้ช่วยเจ้าพนักงานธุรการ
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:"></a>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+<!-- กองการศึกษา -->
+<div class="section-title education">
+    📚 กองการศึกษา ศาสนาและวัฒนธรรม (4 คน)
+</div>
+
+<div class="card-grid">
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางกฤติยานี สุขจุ้ย
+        </div>
+
+        <div class="position">
+            ผู้ดูแลเด็ก
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0932655016">093-265-5016</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางทิวาภรณ์ ศรีบรรเทา
+        </div>
+
+        <div class="position">
+            ผู้ดูแลเด็ก
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0990155148">099-015-5148</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางสาวศิวพร พูลทอง
+        </div>
+
+        <div class="position">
+            ผู้ดูแลเด็ก
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0930124412">093-012-4412</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <div class="avatar">
+        👤
+    </div>
+
+    <div class="info">
+
+        <div class="name">
+            นางสาวสุภาวิตา บัวรอด
+        </div>
+
+        <div class="position">
+            ผู้ดูแลเด็ก
+        </div>
+
+        <div class="phone">
+            📞 <a href="tel:0847451909">084-745-1909</a>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<div style="text-align:center;">
+<a href="Employee.html" class="back">← กลับหน้าข้อมูลบุคลากร</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 องค์การบริหารส่วนตำบลดอนคา
+</footer>
+
+</body>
+</html>

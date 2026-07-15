@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายชื่อติดต่อโรงพยาบาลส่งเสริมสุขภาพตำบล</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Sarabun",sans-serif;
+}
+
+body{
+    background:#FFF8F2;
+}
+
+header{
+    background:linear-gradient(135deg,#F2994A,#F6B26B);
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:32px;
+}
+
+header p{
+    margin-top:8px;
+    font-size:18px;
+}
+
+.container{
+    width:95%;
+    max-width:1000px;
+    margin:40px auto;
+}
+
+.health-title{
+    color:#fff;
+    padding:12px 20px;
+    border-radius:12px;
+    margin:30px 0 15px;
+    font-size:22px;
+    font-weight:bold;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+}
+
+.h1{
+    background:linear-gradient(135deg,#27AE60,#6FCF97);
+}
+
+.h2{
+    background:linear-gradient(135deg,#2980B9,#5DADE2);
+}
+
+.card{
+    background:#fff;
+    border-left:8px solid #27AE60;
+    border-radius:16px;
+    padding:18px 22px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    margin-bottom:30px;
+    transition:.3s;
+}
+
+.card.blue{
+    border-left-color:#2980B9;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(242,153,74,.25);
+}
+
+.avatar{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#EAF9F0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    flex-shrink:0;
+}
+
+.info{
+    flex:1;
+}
+
+.info h2{
+    color:#D97706;
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.info p{
+    color:#666;
+    font-size:17px;
+    margin-bottom:4px;
+}
+
+.tel{
+    font-size:17px;
+}
+
+.tel a{
+    color:#0B66C3;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    background:#F2994A;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+.back:hover{
+    background:#E67E22;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+}
+
+@media(max-width:700px){
+
+.card{
+    flex-direction:column;
+    text-align:center;
+}
+
+.tel{
+    margin-top:10px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🏥 รายชื่อติดต่อโรงพยาบาลส่งเสริมสุขภาพตำบล</h1>
+<p>องค์การบริหารส่วนตำบลดอนคา</p>
+</header>
+
+<div class="container">
+
+<!-- รพ.สต. แห่งที่ 1 -->
+<div class="health-title h1">
+🏥 โรงพยาบาลส่งเสริมสุขภาพบ้านเขาล้อ
+</div>
+
+<div class="card">
+<div class="avatar">👩‍⚕️</div>
+
+<div class="info">
+<h2>นายสันติ  โพธิ์อ่อง</h2>
+<p>ผู้อำนวยการโรงพยาบาลส่งเสริมสุขภาพบ้านเขาล้อ
+</p>
+</div>
+
+<div class="tel">
+📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a>
+</div>
+</div>
+
+<!-- รพ.สต. แห่งที่ 2 -->
+<div class="health-title h2">
+🏥 โรงพยาบาลส่งเสริมสุขภาพบ้านตุ๊กแก
+</div>
+
+<div class="card blue">
+<div class="avatar">👨‍⚕️</div>
+
+<div class="info">
+<h2>นายเกรียงศักดิ์  ชะฎา</h2>
+<p>ผู้อำนวยการโรงพยาบาลส่งเสริมสุขภาพบ้านตุ๊กแก</p>
+</div>
+
+<div class="tel">
+📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a>
+</div>
+</div>
+
+<div style="text-align:center;">
+<a href="index.html" class="back">🏠 กลับหน้าหลัก</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 องค์การบริหารส่วนตำบลดอนคา
+</footer>
+
+</body>
+</html>

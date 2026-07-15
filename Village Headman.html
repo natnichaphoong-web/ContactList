@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายชื่อติดต่อสมาชิกสภา</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Sarabun",sans-serif;
+}
+
+body{
+    background:#FFF8F2;
+}
+
+header{
+    background:linear-gradient(135deg,#F2994A,#F6B26B);
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:32px;
+}
+
+header p{
+    margin-top:8px;
+    font-size:18px;
+}
+
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.member{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:18px 25px;
+
+    margin-bottom:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.member:hover{
+
+    transform:translateX(6px);
+
+    box-shadow:0 12px 25px rgba(242,153,74,.25);
+
+}
+
+.avatar{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#FFE7CC;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:35px;
+
+    margin-right:20px;
+
+}
+
+.info{
+
+    flex:1;
+
+}
+
+.info h2{
+
+    color:#D97706;
+
+    font-size:22px;
+
+    margin-bottom:5px;
+
+}
+
+.info p{
+
+    color:#666;
+
+}
+
+.tel{
+
+    font-size:18px;
+
+}
+
+.tel a{
+
+    color:#0B66C3;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.back{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:12px 28px;
+
+    background:#F2994A;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+}
+
+.back:hover{
+
+    background:#E67E22;
+
+}
+
+footer{
+
+    margin-top:40px;
+
+    padding:20px;
+
+    text-align:center;
+
+    color:#777;
+
+}
+
+@media(max-width:700px){
+
+.member{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.avatar{
+
+margin:0 0 15px;
+
+}
+
+.tel{
+
+margin-top:10px;
+
+}
+
+}
+.village-title{
+    color:#fff;
+    padding:12px 18px;
+    border-radius:12px;
+    margin:30px 0 15px;
+    font-size:22px;
+    font-weight:bold;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+}
+.v1{background:linear-gradient(135deg,#F2994A,#F6B26B);}      /* หมู่ 1 ส้ม */
+.v2{background:linear-gradient(135deg,#27AE60,#6FCF97);}      /* หมู่ 2 เขียว */
+.v3{background:linear-gradient(135deg,#2980B9,#5DADE2);}      /* หมู่ 3 น้ำเงิน */
+.v4{background:linear-gradient(135deg,#8E44AD,#BB6BD9);}      /* หมู่ 4 ม่วง */
+.v5{background:linear-gradient(135deg,#E74C3C,#F1948A);}      /* หมู่ 5 แดง */
+.v6{background:linear-gradient(135deg,#16A085,#48C9B0);}      /* หมู่ 6 เขียวอมฟ้า */
+.v7{background:linear-gradient(135deg,#D35400,#F39C12);}      /* หมู่ 7 ส้มเข้ม */
+.v8{background:linear-gradient(135deg,#2E86C1,#85C1E9);}      /* หมู่ 8 ฟ้า */
+.v9{background:linear-gradient(135deg,#AF7AC5,#D2B4DE);}      /* หมู่ 9 ม่วงอ่อน */
+.v10{background:linear-gradient(135deg,#229954,#7DCEA0);}     /* หมู่ 10 เขียวเข้ม */
+.v11{background:linear-gradient(135deg,#CB4335,#F5B7B1);}     /* หมู่ 11 ชมพูแดง */
+.v12{background:linear-gradient(135deg,#CA6F1E,#F8C471);}     /* หมู่ 12 ทอง */
+.v13{background:linear-gradient(135deg,#1F618D,#5DADE2);}     /* หมู่ 13 น้ำเงินเข้ม */
+.v14{background:linear-gradient(135deg,#7D3C98,#C39BD3);}     /* หมู่ 14 ม่วงเข้ม */
+.v15{background:linear-gradient(135deg,#117A65,#73C6B6);}     /* หมู่ 15 เขียวหยก */
+.v16{background:linear-gradient(135deg,#A04000,#DC7633);}     /* หมู่ 16 น้ำตาลส้ม */
+.v17{background:linear-gradient(135deg,#5D6D7E,#AEB6BF);}     /* หมู่ 17 เทา */
+
+.v18{background:linear-gradient(135deg,#34495E,#5D6D7E);}     /* สารวัตรกำนัน */
+.v19{background:linear-gradient(135deg,#566573,#85929E);}     /* สารวัตรกำนัน */
+.v20{background:linear-gradient(135deg,#C0392B,#EC7063);}     /* แพทย์ประจำหมู่บ้าน */
+.m1{border-left:8px solid #F2994A;}
+.m2{border-left:8px solid #27AE60;}
+.m3{border-left:8px solid #2980B9;}
+.m4{border-left:8px solid #8E44AD;}
+.m5{border-left:8px solid #E74C3C;}
+.m6{border-left:8px solid #16A085;}
+.m7{border-left:8px solid #D35400;}
+.m8{border-left:8px solid #2E86C1;}
+.m9{border-left:8px solid #AF7AC5;}
+.m10{border-left:8px solid #229954;}
+.m11{border-left:8px solid #CB4335;}
+.m12{border-left:8px solid #CA6F1E;}
+.m13{border-left:8px solid #1F618D;}
+.m14{border-left:8px solid #7D3C98;}
+.m15{border-left:8px solid #117A65;}
+.m16{border-left:8px solid #A04000;}
+.m17{border-left:8px solid #5D6D7E;}
+
+.m18{border-left:8px solid #34495E;}
+.m20{border-left:8px solid #C0392B;}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>รายชื่อติดต่อกำนัน-ผู้ใหญ่บ้าน</h1>
+
+<p>องค์การบริหารส่วนตำบลดอนคา</p>
+
+</header>
+
+<div class="container">
+
+<!-- หมู่ที่ 1 -->
+<div class="village-title v1">🏡 หมู่ที่ 1</div>
+<div class="member m1">
+<div class="avatar">👤</div>
+<div class="info">
+<h2>หมู่ที่ 1 กำนัน</h2>
+<p>นายสมเกียรติ ประภาชัยมงคล</p>
+</div>
+<div class="tel">📞 <a href="tel:0983289256">098-328-9256</a></div>
+</div>
+<!-- หมู่ที่ 1 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m1">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายสมชาย  พูลทอง</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 1 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m1">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางสุภัสสร  แป้นลิ้ม</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+
+<!-- หมู่ที่ 2 -->
+<div class="village-title v2">🏡 หมู่ที่ 2</div>
+<div class="member m2">
+<div class="avatar">👤</div>
+<div class="info">
+<h2>หมู่ที่ 2 ผู้ใหญ่บ้าน</h2>
+<p>นางษุภฑากร พูลทอง</p>
+</div>
+<div class="tel">📞 <a href="tel:0828832523">082-883-2523</a></div>
+</div>
+<!-- หมู่ที่ 2 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m2">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายบรรเจิด  นกทนงค์</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 2 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m2">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายสันต์  ฤทธิ์บำรุง</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+<!-- หมู่ที่ 3 ผู้ใหญ่บ้าน-->
+<div class="village-title v3">🏡 หมู่ที่ 3</div>
+<div class="member m3">
+<div class="avatar">👤</div>
+<div class="info">
+<h2>หมู่ที่ 3 ผู้ใหญ่บ้าน</h2>
+<p>นายสุนทร สุขแจ่ม</p>
+</div>
+<div class="tel">📞 <a href="tel:0611596156">061-159-6156</a></div>
+</div>
+<!-- หมู่ที่ 3 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m3">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายมานะ  ศรีบรรเทา</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 3 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m3">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายอำนาจ  สุขแจ่ม</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+
+<!-- หมู่ที่ 4 ผู้ใหญ่บ้าน-->
+<div class="village-title v4">🏡 หมู่ที่ 4</div>
+<div class="member m4">
+<div class="avatar">👤</div>
+<div class="info">
+<h2>หมู่ที่ 4 ผู้ใหญ่บ้าน</h2>
+<p>นายธีรวัฒน์ สอนมาก</p>
+</div>
+<div class="tel">📞 <a href="tel:0800271717">080-027-1717</a></div>
+</div>
+<!-- หมู่ที่ 4 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m4">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายชวนคิด  ขุมโมกข์</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 4 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m4">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายไวพจน์  ฤทธิ์บำรุง</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+<!-- หมู่ที่ 5 ผู้ใหญ่บ้าน-->
+<div class="village-title v5">🏡 หมู่ที่ 5</div>
+<div class="member m5">
+<div class="avatar">👤</div>
+<div class="info">
+<h2>หมู่ที่ 5 ผู้ใหญ่บ้าน</h2>
+<p>นายสำเริง  หลวงไกรราช</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 5 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m5">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางสมจิตร  หลวงไกรราช</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 5 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m5">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นาย...........................</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 6 ผู้ใหญ่บ้าน-->
+<div class="village-title v6">🏡 หมู่ที่ 6</div>
+<div class="member m6">
+<div class="avatar">👤</div>
+<div class="info">
+<h2>หมู่ที่ 6 ผู้ใหญ่บ้าน</h2>
+<p>นางสาวอุมาพร สอนเสียง</p>
+</div>
+<div class="tel">📞 <a href="tel:0861190336">086-119-0336</a></div>
+</div>
+<!-- หมู่ที่ 6 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m6">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางปราณี  อินทร์ชู</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 6 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m6">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางสาวปริณดา  สอนเสียง</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+
+<!-- หมู่ที่ 7 ผู้ใหญ่บ้าน-->
+<div class="village-title v7">🏡 หมู่ที่ 7</div>
+<div class="member m7"><div class="avatar">👤</div><div class="info"><h2>หมู่ที่ 7 ผู้ใหญ่บ้าน</h2><p>นายสำเริง ขาวทอง</p></div><div class="tel">📞 <a href="tel:0862003586">086-200-3586</a></div></div>
+<!-- หมู่ที่ 7 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m7">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายยวน  ฤทธิ์บำรุง</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 7 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m7">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายสุเทพ  สูญน่วม</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 8 ผู้ใหญ่บ้าน -->
+<div class="village-title v8">🏡 หมู่ที่ 8</div>
+<div class="member m8"><div class="avatar">👤</div><div class="info"><h2>หมู่ที่ 8  ผู้ใหญ่บ้าน</h2><p>นายจำเรียง สุขแจ่ม</p></div><div class="tel">📞 <a href="tel:0631781173">063-178-1173</a></div></div>
+<!-- หมู่ที่ 8 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m8">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางสาวอัจฉรา  ทวีจันทร์</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 8 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m8">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางถาวร  เขี่ยวกสิกร</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+<!-- หมู่ที่ 9 ผู้ใหญ่บ้าน-->
+<div class="village-title v9">🏡 หมู่ที่ 9</div>
+<div class="member m9"><div class="avatar">👤</div><div class="info"><h2>หมู่ที่ 9 ผู้ใหญ่บ้าน</h2><p>นายวสันต์ เพ็งหมู</p></div><div class="tel">📞 <a href="tel:0961923225">096-192-3225</a></div></div>
+<!-- หมู่ที่ 9 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m9">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางมถุรดา  นามเสาร์</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 9 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m9">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางสาวรวิวรรณ  สุขแจ่ม</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+
+<!-- หมู่ที่ 10 ผู้ใหญ่บ้าน-->
+<div class="village-title v10">🏡 หมู่ที่ 10</div>
+<div class="member m10"><div class="avatar">👤</div><div class="info"><h2>หมู่ที่ 10 ผู้ใหญ่บ้าน</h2><p>นายประกิจ พูลทอง</p></div><div class="tel">📞 <a href="tel:0616628321">061-662-8321</a></div></div>
+<!-- หมู่ที่ 10 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m10">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายประเทือง  หงษ์ศิลป์</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 10 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m10">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายสามารถ  พูลทอง</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 10 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m10">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายสุริวุธ  สนิทผล</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+<!-- หมู่ที่ 11 ผู้ใหญ่บ้าน-->
+<div class="village-title v11">🏡 หมู่ที่ 11</div>
+<div class="member m11"><div class="avatar">👤</div><div class="info"><h2>หมู่ที่ 11 ผู้ใหญ่บ้าน</h2><p>นายสมบุญ ชูมา</p></div><div class="tel">📞 <a href="tel:0824018771">082-401-8771</a></div></div>
+<!-- หมู่ที่ 11 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m11">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายสุเทพ  ฟักทอง</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 11 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m11">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางแสงดาว  สนิทผล</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+<!-- หมู่ที่ 12 ผู้ใหญ่บ้าน-->
+<div class="village-title v12">🏡 หมู่ที่ 12</div>
+<div class="member m12"><div class="avatar">👤</div><div class="info"><h2>หมู่ที่ 12 ผู้ใหญ่บ้าน</h2><p>นายสาธิต ฤทธิ์บำรุง</p></div><div class="tel">📞 <a href="tel:0983422328">098-342-2328</a></div></div>
+<!-- หมู่ที่ 12 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m12">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายเย็น  สนิทผล</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 12 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m12">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายวิชัย  โพธิ์อ่อง</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+<!-- หมู่ที่ 13 ผู้ใหญ่บ้าน-->
+<div class="village-title v13">🏡 หมู่ที่ 13</div>
+<div class="member m13"><div class="avatar">👤</div><div class="info"><h2>หมู่ที่ 13 ผู้ใหญ่บ้าน</h2><p>นางศิริเพ็ญ ประภาชัยมงคล</p></div><div class="tel">📞 <a href="tel:0803235567">080-323-5567</a></div></div>
+<!-- หมู่ที่ 13 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m13">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายยุทธการ  เสือน้อย</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 13 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m13">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายถนอม  ชาญศิลป์</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+
+<!-- หมู่ที่ 14 ผู้ใหญ่บ้าน-->
+<div class="village-title v14">🏡 หมู่ที่ 14</div>
+<div class="member m14"><div class="avatar">👤</div><div class="info"><h2>หมู่ที่ 14 ผู้ใหญ่บ้าน</h2><p>นายจำลอง บุญชิด</p></div><div class="tel">📞 <a href="tel:0968303743">096-830-3743</a></div></div>
+<!-- หมู่ที่ 14 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m14">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางปัญญา  ฟองงาม</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 14 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m14">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางชณัศา  ศรีบรรเทา</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+<!-- หมู่ที่ 15 ผู้ใหญ่บ้าน-->
+<div class="village-title v15">🏡 หมู่ที่ 15</div>
+<div class="member m15"><div class="avatar">👤</div><div class="info"><h2>หมู่ที่ 15 ผู้ใหญ่บ้าน</h2><p>นายพันธ์ศักดิ์ ฤทธิ์บำรุง</p></div><div class="tel">📞 <a href="tel:0932468402">093-246-8402</a></div></div>
+<!-- หมู่ที่ 15 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m15">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายรุ่งโรจน์  เกตุทอง</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 15 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m15">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายไพรัตน์  ฤทธิ์บำรุง</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+
+<!-- หมู่ที่ 16 ผู้ใหญ่บ้าน-->
+<div class="village-title v16">🏡 หมู่ที่ 16</div>
+<div class="member m16"><div class="avatar">👤</div><div class="info"><h2>หมู่ที่ 16 ผู้ใหญ่บ้าน</h2><p>นายนิรันด์ สิงห์เรือง</p></div><div class="tel">📞 <a href="tel:0942845292">094-284-5292</a></div></div>
+<!-- หมู่ที่ 16 ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m16">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายณรงศักดิ์  สนิทผล</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!--  ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m16">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายสมาน  จินดามณี</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- หมู่ที่ 17 ผู้ใหญ่บ้าน -->
+<div class="village-title v17">🏡 หมู่ที่ 17</div>
+<div class="member m17"><div class="avatar">👤</div><div class="info"><h2>หมู่ที่ 17ผู้ใหญ่บ้าน</h2><p>นายอมรเทพ ขุมโมกข์</p></div><div class="tel">📞 <a href="tel:0818877279">081-887-7279</a></div></div>
+<!--  ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m17">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นายพนม  พูลทอง</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- ผู้ช่วยผู้ใหญ่บ้าน -->
+<div class="member m17">
+<div class="avatar">👤</div>
+<div class="info">
+<h2> ผู้ช่วยผู้ใหญ่บ้าน</h2>
+<p>นางลัดดาวัลย์  แป้นอินทร์</p>
+</div>
+<div class="tel">📞 <a href="tel:xxxxxxxxxx">xxx-xxx-xxxx</a></div>
+</div>
+<!-- สารวัตรกำนัน -->
+<div class="village-title v18">👮 สารวัตรกำนัน</div>
+<div class="member m18"><div class="avatar">👤</div><div class="info"><h2>สารวัตรกำนัน</h2><p>นายยงยุทธ คงเมือง</p></div><div class="tel">📞 <a href="tel:0872003383">087-200-3383</a></div></div>
+
+<!-- สารวัตรกำนัน -->
+<div class="village-title v19">👮 สารวัตรกำนัน</div>
+<div class="member m18"><div class="avatar">👤</div><div class="info"><h2>สารวัตรกำนัน</h2><p>นางณัฐพร อ้นบางใบ</p></div><div class="tel">📞 <a href="tel:0872008002">087-200-8002</a></div></div>
+
+<!-- แพทย์ประจำหมู่บ้าน -->
+<div class="village-title v20">🏥 แพทย์ประจำหมู่บ้าน</div>
+<div class="member m20"><div class="avatar">👤</div><div class="info"><h2>แพทย์ประจำหมู่บ้าน</h2><p>นางสุชีรา ขาวพราย</p></div><div class="tel">📞 <a href="tel:0892704349">089-270-4349</a></div></div>
+
+<div style="text-align:center;">
+<a href="index.html" class="back">🏠 กลับหน้าหลัก</a>
+</div>
+
+</div>
+
+<footer>
+
+© 2026 องค์การบริหารส่วนตำบลดอนคา
+
+</footer>
+
+</body>
+</html>
